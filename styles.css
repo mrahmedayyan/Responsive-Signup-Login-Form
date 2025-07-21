@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4; /* Light grey background for overall contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333; /* Subtle black for readability */
+}
+
+/* Container Styling */
+.container {
+  width: 420px;
+  background: #ffffff; /* White container for high contrast */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  overflow: hidden;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-8px); /* Lift effect */
+}
+
+/* Form Toggle Buttons */
+.form-toggle {
+  display: flex;
+  justify-content: space-around;
+  background: #f4f4f4; /* Light grey background for the toggle section */
+  border-bottom: 2px solid #ddd; /* Divider for sections */
+  padding: 10px 0;
+}
+
+.form-toggle button {
+  padding: 10px 25px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #284361; /* Primary color */
+  cursor: pointer;
+  transition: color 0.3s, background 0.3s;
+  border-radius: 20px;
+}
+
+.form-toggle button.active {
+  background: #284361; /* Active state */
+  color: #fff; /* White text on active */
+  box-shadow: 0 4px 10px rgba(40, 67, 97, 0.4); /* Subtle glow */
+}
+
+.form-toggle button:hover {
+  background: #ddd; /* Grey hover background for inactive buttons */
+}
+
+/* Form Styling */
+.form {
+  display: none;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.form.active {
+  display: flex;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #284361; /* Primary color */
+}
+
+form input {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #f9f9f9; /* Subtle light grey background for inputs */
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: #284361; /* Focus highlight */
+  box-shadow: 0 0 8px rgba(40, 67, 97, 0.3); /* Glow on focus */
+  outline: none;
+}
+
+form button {
+  padding: 12px 20px;
+  border: none;
+  background: #284361; /* Primary color for buttons */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.03); /* Slight scale effect */
+  box-shadow: 0 6px 12px rgba(40, 67, 97, 0.3); /* Glow on hover */
+}
+
+form a {
+  text-align: center;
+  color: #284361; /* Primary color for links */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+form a:hover {
+  color: #555; /* Dark grey for hover */
+}
+
+/* Additional Styling for Responsiveness */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  form h2 {
+    font-size: 20px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+}
